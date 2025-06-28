@@ -1,0 +1,146 @@
+/* #region basic */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+}
+html,
+body {
+  height: 100%;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  margin: 0;
+  font-family: "Jost", sans-serif;
+  font-size: 1.8rem;
+  color: #333;
+  line-height: 1.6;
+  display: flex;
+  flex-direction: column;
+}
+main {
+  flex-grow: 1;
+}
+
+img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+a {
+  text-decoration: none;
+}
+li {
+  list-style-type: none;
+}
+.container {
+  max-width: 1750px;
+  margin: 0 auto;
+}
+.container2 {
+  max-width: 1200px;
+  margin: 0 auto;
+  height: 100%;
+}
+.h100 {
+  height: 100%;
+}
+/* #endregion basic */
+
+/* #region main */
+.accent {
+  background-color: #d52027;
+  color: #ffffff;
+  transition: all 0.3s;
+  padding: 1.8rem 4rem;
+  cursor: pointer;
+  border-radius: 5px;
+}
+.accent:hover {
+  background-color: #fff;
+  color: #d52027;
+  transition: all 0.3s;
+}
+/* #endregion main */
+
+/* #region header */
+header {
+  padding: 2rem 0;
+  background-color: #141024;
+  color: #ffffff;
+}
+.header__wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header__wrap a {
+  color: #ffffff;
+  font-size: 3rem;
+  font-weight: 600;
+}
+.header__menu {
+  display: flex;
+  justify-content: space-between;
+  gap: 4rem;
+  font-size: 2rem;
+  font-weight: 400;
+}
+/* #endregion header */
+
+/* #region hero */
+.hero {
+  background-color: #141024;
+  height: 90vh;
+}
+.hero__wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+}
+.hero__left {
+  flex: 1;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  justify-content: space-between;
+  align-items: start;
+}
+.hero__right {
+  position: relative;
+  flex: 1;
+  display: flex;
+  align-items: end;
+  justify-content: center;
+  overflow: hidden;
+}
+.hero__right img {
+  object-fit: contain;
+  max-height: 85%;
+  position: relative;
+  z-index: 1;
+}
+.hero__right .border {
+  position: absolute;
+  border: 56px solid #fff;
+  border-radius: 50%;
+  width: 100%;
+  aspect-ratio: 1 / 1; /* высота = ширина */
+  z-index: 0;
+}
+.hero__left h1 {
+  font-size: 7rem;
+  font-weight: 600;
+  line-height: 1;
+}
+.hero__left p {
+  width: 80%;
+}
+/* #endregion hero */
