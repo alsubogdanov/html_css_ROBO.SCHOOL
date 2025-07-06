@@ -9,16 +9,20 @@
       href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="style.css" />
-    <title>Document</title>
+
+    <link rel="stylesheet" href="assets/styles/margin_padding.css" />
+    <link rel="stylesheet" href="assets/styles/flex_width_height.css" />
+    <link rel="stylesheet" href="assets/styles/style.css" />
+
+    <title>ROBO.SCHOOL</title>
   </head>
   <body>
-    <header>
-      <div class="container">
-        <div class="header__wrap">
+    <header class="pt1 pb1">
+      <div class="container2">
+        <div class="header__wrap d-flex jcsb aic">
           <a href="/" class="logo">ROBO.SCHOOL</a>
           <nav>
-            <ul class="header__menu">
+            <ul class="header__menu d-flex g2">
               <li>О школе</li>
               <li>Тренеры</li>
               <li>Стоимость</li>
@@ -30,24 +34,148 @@
     </header>
     <main>
       <section class="hero">
-        <div class="container2 h100">
-          <div class="hero__wrap h100">
-            <div class="hero__left">
+        <div class="container h100">
+          <div class="hero__wrap d-flex h100">
+            <div class="hero__left d-flex f-column jcc aifs g4">
               <h1>ROBO SCHOOL</h1>
-              <p>
+              <p class="w70">
                 Курсы повышения квалификации по робототехнике для педагогов
                 начальной школы
               </p>
               <button class="accent">Записаться на курс</button>
             </div>
-            <div class="hero__right h100">
-              <img src="img/1.png" alt="girl" />
+            <div class="hero__right d-flex aie jcc h100">
+              <img src="assets/img/1.png" alt="girl" />
               <div class="border"></div>
             </div>
           </div>
         </div>
       </section>
+      <section class="about pt10 pb10">
+        <div class="container">
+          <div class="about__desc w70 mb5">
+            <p>
+              <span>Robo School</span> – учреждение для формирования кадрового
+              педагогического резерва в сфере робототехники и программирования
+            </p>
+          </div>
+          <div class="about__wrap d-flex g4">
+            <div class="about__item">
+              <span>10</span>
+              <p>УМК по различным направлениям по робототехнике</p>
+            </div>
+            <div class="about__item">
+              <span>20</span>
+              <p>Школ, в которых запущена робототехника</p>
+            </div>
+            <div class="about__item">
+              <span>100</span>
+              <p>Педагогов прошедших курсы повышения квалификации</p>
+            </div>
+            <div class="about__item">
+              <span>10000</span>
+              <p>Обученных детей на базе собственных центров</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="cards mb5">
+        <div class="container">
+          <h2>Выберите нужный пакет</h2>
+          <div class="cards__wrap d-flex g2">
+            <div class="card">
+              <h3>– PRO –</h3>
+              <span class="price">20.000 ₽</span>
+              <p>УМК по робототетхнике  и программированию</p>
+              <button class="accent">Оставить заявку</button>
+            </div>
+            <div class="card">
+              <h3>– PRO –</h3>
+              <span class="price">20.000 ₽</span>
+              <p>УМК по робототетхнике  и программированию</p>
+              <button class="accent">Оставить заявку</button>
+            </div>
+            <div class="card">
+              <h3>– PRO –</h3>
+              <span class="price">20.000 ₽</span>
+              <p>УМК по робототетхнике  и программированию</p>
+              <button class="accent">Оставить заявку</button>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="coaches mb3">
+        <div class="container">
+          <div class="coaches__wrap d-flex g2 mb5">
+            <div class="coache d-flex f-column g2 aifs">
+              <img src="assets/img/11.jpg" class="coache__img" alt="" />
+              <h3 class="coache__name">Ирина Лайм</h3>
+              <p class="coache__desc">преподаватель по робототехнике</p>
+              <a href="#" class="coache__link">Подробнее</a>
+            </div>
+            <div class="coache d-flex f-column g2 aifs">
+              <img src="assets/img/22.jpg" class="coache__img" alt="" />
+              <h3 class="coache__name">Максим Петров</h3>
+              <p class="coache__desc">преподаватель по робототехнике</p>
+              <a href="#" class="coache__link">Подробнее</a>
+            </div>
+            <div class="coache d-flex f-column g2 aifs">
+              <img src="assets/img/33.jpg" class="coache__img" alt="" />
+              <h3 class="coache__name">Марина Орлова</h3>
+              <p class="coache__desc">преподаватель по робототехнике</p>
+              <a href="#" class="coache__link">Подробнее</a>
+            </div>
+          </div>
+          <div class="progress">
+            <div class="progress-bar"></div>
+          </div>
+        </div>
+      </section>
     </main>
-    <footer></footer>
+    <div class="container">
+      <button class="btn" id="openModalBtn" onclick="openModal()">
+        Open Modal
+      </button>
+    </div>
+    <div class="modal" id="myModal" onclick="closeModal(event)">
+      <div class="modal-content">
+        <button
+          class="close-btn"
+          id="closeModalBtn"
+          onclick="closeModal(event)"
+        >
+          Закрыть
+        </button>
+        <div class="modal-content__top d-flex g5">
+          <img src="assets/img/11.jpg" alt="" class="modal-content__img" />
+          <div class="modal-content__info d-flex f-column g2">
+            <h3 class="coache__name">Ирина Лайм</h3>
+            <p class="coache__desc">преподаватель по робототехнике</p>
+            <div class="social d-flex g2">
+              <img src="assets/img/fb.png" alt="" />
+              <img src="assets/img/instagram.png" alt="" />
+            </div>
+          </div>
+        </div>
+        <h2>Modal Popup</h2>
+        <p>This is a simple modal popup example.</p>
+      </div>
+    </div>
+    <footer>My footer</footer>
+    <script>
+      function openModal() {
+        document.getElementById("myModal").style.display = "flex";
+      }
+
+      function closeModal(event) {
+        if (
+          event.target === document.getElementById("myModal") ||
+          event.target === document.getElementById("closeModalBtn")
+        ) {
+          document.getElementById("myModal").style.display = "none";
+        }
+        // document.getElementById('myModal').style.display = 'none';
+      }
+    </script>
   </body>
 </html>
