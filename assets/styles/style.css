@@ -180,7 +180,137 @@ h1 {
   transition: all 0.3s;
 }
 /* #endregion cards */
+.info::before {
+  content: ""; /* Обязательно */
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background-image: url("../img/back.png"); /* путь к файлу */
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin-right: 8px;
+  background-position: 3px 4px;
+}
 
+/* .section-title::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 4px;
+  background: #0077cc;
+  margin-top: 8px;
+} */
+
+/* #region forClass */
+.hover_move {
+  position: relative;
+  overflow: hidden;
+  display: inline-block;
+  min-width: 30rem;
+}
+
+.hover_move:after {
+  content: "";
+  position: absolute;
+  height: 2px;
+  width: 100%;
+  bottom: 0;
+  background-color: green;
+  left: 0;
+}
+.hover_move:before {
+  content: "";
+  position: absolute;
+  height: 2px;
+  width: 100%;
+  bottom: 0;
+  background-color: green;
+  left: -102%;
+}
+.hover_move:hover:after {
+  transition: all 1s;
+  left: 100%;
+}
+.hover_move:hover:before {
+  transition: all 1s;
+  transition-delay: 0.5s;
+  left: 0;
+}
+
+.hover_dublemove {
+  position: relative;
+  overflow: hidden;
+  display: inline-block;
+}
+.hover_dublemove::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  background-color: red;
+  left: -100%;
+  top: 0;
+  transition: all 0.5s;
+}
+.hover_dublemove:hover::after {
+  left: 0;
+  transition: all 0.5s;
+}
+.hover_dublemove::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  background-color: red;
+  right: -100%;
+  bottom: 0;
+  transition: all 0.5s;
+}
+.hover_dublemove:hover::before {
+  right: 0;
+  transition: all 0.5s;
+}
+
+/* #endregion  */
+
+/* #region popup */
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  justify-content: center;
+  align-items: center;
+  z-index: 10000;
+}
+
+.modal-content {
+  background-color: white;
+  padding: 20px;
+  border-radius: 5px;
+  text-align: center;
+  position: relative;
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: red;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  width: 25px;
+  height: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* #endregion popup */
 /* #region coaches */
 
 .coache__img {
@@ -244,45 +374,36 @@ h1 {
   border-top-right-radius: 5px;
   border-bottom-right-radius: 5px;
 }
+.coaches .container {
+  overflow: hidden;
+}
 /* #endregion coaches */
+/* #region slider */
 
-/* #region modal */
-.modal {
-  display: none;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
-  justify-content: center;
-  align-items: center;
-}
+/* #endregion slider */
 
-.modal-content {
-  background-color: white;
-  padding: 4rem;
-  border-radius: 20px;
-  text-align: center;
-  position: relative;
+/* #region media */
+@media (max-width: 1750px) {
+  .container2 {
+    max-width: 1500px;
+  }
 }
-
-.close-btn {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  border: none;
-  cursor: pointer;
-  background-color: transparent;
-  color: rgba(0, 0, 0, 0.5);
+@media (max-width: 1550px) {
+  .container2 {
+    width: 100%;
+    padding: 0 3rem;
+  }
 }
-.social img {
-  width: 3rem;
-  height: 3rem;
+@media (max-width: 1350px) {
+  .container {
+    width: 100%;
+    padding: 0 3rem;
+  }
 }
-.modal-content__img {
-  width: 16rem;
-  height: 22rem;
-  object-fit: cover;
+@media (max-width: 1218px) {
+  .coache__img {
+    height: 35rem;
+    width: 30rem;
+  }
 }
-/* #endregion modal */
+/* #endregion media */

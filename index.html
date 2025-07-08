@@ -16,6 +16,7 @@
 
     <title>ROBO.SCHOOL</title>
   </head>
+
   <body>
     <header class="pt1 pb1">
       <div class="container2">
@@ -81,7 +82,7 @@
       </section>
       <section class="cards mb5">
         <div class="container">
-          <h2>Выберите нужный пакет</h2>
+          <h2 class="hover_dublemove">Выберите нужный пакет</h2>
           <div class="cards__wrap d-flex g2">
             <div class="card">
               <h3>– PRO –</h3>
@@ -106,7 +107,9 @@
       </section>
       <section class="coaches mb3">
         <div class="container">
-          <div class="coaches__wrap d-flex g2 mb5">
+          <button id="prevBtn">←</button>
+          <button id="nextBtn">→</button>
+          <div id="carousel" class="coaches__wrap d-flex g2 mb5">
             <div class="coache d-flex f-column g2 aifs">
               <img src="assets/img/11.jpg" class="coache__img" alt="" />
               <h3 class="coache__name">Ирина Лайм</h3>
@@ -125,57 +128,56 @@
               <p class="coache__desc">преподаватель по робототехнике</p>
               <a href="#" class="coache__link">Подробнее</a>
             </div>
+            <div class="coache d-flex f-column g2 aifs">
+              <img src="assets/img/33.jpg" class="coache__img" alt="" />
+              <h3 class="coache__name">333Марина Орлова</h3>
+              <p class="coache__desc">преподаватель по робототехнике</p>
+              <a href="#" class="coache__link">Подробнее</a>
+            </div>
+            <div class="coache d-flex f-column g2 aifs">
+              <img src="assets/img/33.jpg" class="coache__img" alt="" />
+              <h3 class="coache__name">444Марина Орлова</h3>
+              <p class="coache__desc">преподаватель по робототехнике</p>
+              <a href="#" class="coache__link">Подробнее</a>
+            </div>
           </div>
           <div class="progress">
             <div class="progress-bar"></div>
           </div>
         </div>
       </section>
-    </main>
-    <div class="container">
-      <button class="btn" id="openModalBtn" onclick="openModal()">
-        Open Modal
-      </button>
-    </div>
-    <div class="modal" id="myModal" onclick="closeModal(event)">
-      <div class="modal-content">
-        <button
-          class="close-btn"
-          id="closeModalBtn"
-          onclick="closeModal(event)"
-        >
-          Закрыть
+
+      <section class="test mb5 container">
+        <h2 class="hover_dublemove">Контакты</h2>
+        <p class="info">Информация</p>
+
+        <button class="btn" id="openModalBtn" onclick="openModal()">
+          Open Modal
         </button>
-        <div class="modal-content__top d-flex g5">
-          <img src="assets/img/11.jpg" alt="" class="modal-content__img" />
-          <div class="modal-content__info d-flex f-column g2">
-            <h3 class="coache__name">Ирина Лайм</h3>
-            <p class="coache__desc">преподаватель по робототехнике</p>
-            <div class="social d-flex g2">
-              <img src="assets/img/fb.png" alt="" />
-              <img src="assets/img/instagram.png" alt="" />
-            </div>
+        <!-- <div class="slider-container">
+          <button id="prevBtn">←</button>
+          <div class="slider" id="slider">
+            <div class="card">1</div>
+            <div class="card">2</div>
+            <div class="card">3</div>
+            <div class="card">4</div>
+            <div class="card">5</div>
           </div>
-        </div>
+          <button id="nextBtn">→</button>
+        </div> -->
+      </section>
+    </main>
+
+    <footer>My footer</footer>
+    <div class="modal" id="myModal" onclick="closeModal()">
+      <div class="modal-content">
+        <button class="close-btn" id="closeModalBtn" onclick="closeModal()">
+          &times;
+        </button>
         <h2>Modal Popup</h2>
         <p>This is a simple modal popup example.</p>
       </div>
     </div>
-    <footer>My footer</footer>
-    <script>
-      function openModal() {
-        document.getElementById("myModal").style.display = "flex";
-      }
-
-      function closeModal(event) {
-        if (
-          event.target === document.getElementById("myModal") ||
-          event.target === document.getElementById("closeModalBtn")
-        ) {
-          document.getElementById("myModal").style.display = "none";
-        }
-        // document.getElementById('myModal').style.display = 'none';
-      }
-    </script>
+    <script src="assets/js/js.js"></script>
   </body>
 </html>
